@@ -1,0 +1,108 @@
+header{
+    padding: 0 20px;
+    padding-top: 20px;
+}
+.header__logo__wrapper h2{
+    color: white;
+}
+.header__svg{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+.header__video{
+    color: white;
+    font-size:40px;
+    cursor: pointer;
+}
+.header__bell{
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+.header__person{
+    width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#header__serch{
+    width: 400px;
+    height: 45px;
+    padding-left: 30px;
+  border-radius: 20px;
+    background-color: #0F0F0F;
+    border: 1px solid #303030;
+    /* border: none; */
+    color: white;
+    
+}
+.header__serch{
+    display: flex;
+    align-items: center;    
+    gap: 10px;
+    /* border: 1px solid #303030;
+    border-top-left-radius:; */
+}
+.header__serch label{
+    padding: 12px 15px;
+}
+.header__serch label:hover{
+    background-color: #303030;
+    border-radius: 50%;
+}
+.header__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__logo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header__logo__wrapper{
+    display: flex;
+    align-items: center;
+    
+}
+.youtube__logo{
+    font-size: 30px;
+    cursor: pointer;
+}
+.header__logo__wrapper h2{
+    cursor: pointer;
+}
+.header__profil{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+.header__modal__video{
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    width: 250px;
+    height: 120px;
+    border-radius: 20px;
+    background-color: #282828;
+    padding: 20px;
+    text-align: center;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: 0.3s;
+}
+.header__modal__video.active{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+.header__modal__video h2{
+    color: white;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
