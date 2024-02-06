@@ -90,7 +90,6 @@ header{
     text-align: center;
     visibility: hidden;
     transform: translateY(-10px);
-    transition: 0.3s;
 }
 .header__modal__video.active{
     transform: translateY(0);
@@ -105,4 +104,43 @@ header{
     gap: 10px;
     cursor: pointer;
     margin-top: 10px;
+}
+.header__modal__ball{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 250px;
+    height: 120px;
+    border-radius: 20px;
+    background-color: #282828;
+    padding: 20px;
+    text-align: center;
+    visibility: hidden;
+    transform: translateY(-10px);
+}
+.active{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+.header__modal__person{
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    width: 250px;
+    height: 120px;
+    border-radius: 20px;
+    background-color: #282828;
+    padding: 20px;
+    text-align: center;
+    visibility: hidden;
+    transform: translateY(-10px);
+}
+.header__modal__person h2{
+    color: white;
+}
+.active{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
 }

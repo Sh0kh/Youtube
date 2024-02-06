@@ -4,7 +4,9 @@ import '../Style/Header.css'
 import header__person from '../img/header__prson.png'
 import { useState, useRef } from 'react'
 import { useClick } from '../useClick'
+import HeaderModalBall from '../Smal Components/HeaderModalBall'
 function Header() {
+    // video
     const [ isMenuOpen, setMenuOpen ] =  useState(false);
     const toggleMenu = () => {
         setMenuOpen(!isMenuOpen);
@@ -13,6 +15,25 @@ function Header() {
     useClick(menuRef,()=>{
         if(isMenuOpen) setTimeout(()=> setMenuOpen(false),50);
     });
+
+    // bell
+    const [isMenuOpenBell, setMenuOpenBell] = useState(false)
+    const toggleMenuBell = ()=>{
+        setMenuOpenBell(!isMenuOpenBell);
+    };
+    const menRefBell = useRef(null);
+    useClick(menRefBell,()=>{
+        if(isMenuOpenBell)setTimeout(()=>setMenuOpenBell(false),50)
+    });
+    // person
+    const [isMenuOpenPerson, setMenuOpenPerson] = useState(false)
+    const toggleMenuPerson = ()=>{
+        setMenuOpenPerson(!isMenuOpenPerson);
+    };
+    const menRefPerson = useRef(null);
+    useClick(menRefPerson,()=>{
+        if(isMenuOpenPerson)setTimeout(()=>setMenuOpenPerson(false),50)
+    })
   return (
        <header>
             <div className='header__wrapper'>
@@ -30,8 +51,8 @@ function Header() {
                 </div>
                 <div className='header__profil'>
                 <svg onClick={toggleMenu} className='header__video' xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11z"/></svg>
-                <svg className='header__bell' xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M10 21h4c0 1.1-.9 2-2 2s-2-.9-2-2m11-2v1H3v-1l2-2v-6c0-3.1 2-5.8 5-6.7V4c0-1.1.9-2 2-2s2 .9 2 2v.3c3 .9 5 3.6 5 6.7v6zm-4-8c0-2.8-2.2-5-5-5s-5 2.2-5 5v7h10z"/></svg>
-                <img className='header__person' src={header__person} alt="foto" />
+                <svg onClick={toggleMenuBell} className='header__bell' xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M10 21h4c0 1.1-.9 2-2 2s-2-.9-2-2m11-2v1H3v-1l2-2v-6c0-3.1 2-5.8 5-6.7V4c0-1.1.9-2 2-2s2 .9 2 2v.3c3 .9 5 3.6 5 6.7v6zm-4-8c0-2.8-2.2-5-5-5s-5 2.2-5 5v7h10z"/></svg>
+                <img onClick={toggleMenuPerson} className='header__person' src={header__person} alt="foto" />
                 <div className={`header__modal__video ${isMenuOpen ? "active" : ""}`} ref={menuRef}>
                     <h2>
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M39 6H9a3 3 0 0 0-3 3v30a3 3 0 0 0 3 3h30a3 3 0 0 0 3-3V9a3 3 0 0 0-3-3"/><path fill="currentColor" d="M20.5 28v-6.062l5.25 3.03L31 28l-5.25 3.031l-5.25 3.031z"/><path d="M6 15h36m-9-9l-6 9m-6-9l-6 9"/></g></svg> Добавить Видео
@@ -39,6 +60,14 @@ function Header() {
                     <h2>
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M1.365 6.127h11.447v6.232a1 1 0 0 1-1 1H2.366a1 1 0 0 1-1-1zm-.001 0L12.42 3.164l-.48-1.79a1 1 0 0 0-1.225-.708L1.591 3.112a1 1 0 0 0-.707 1.224zm2.626 4.69h1.278m-.871-5.503l.64-3.126m2.972 2.158l.64-3.126"/></svg> 
                     Начать эфир 
+                    </h2>
+                </div>
+                <div className={`header__modal__ball ${isMenuOpenBell ? "active" : ""}`} ref={menRefBell}>
+                    <HeaderModalBall/>
+                </div>
+                <div className={`header__modal__person ${isMenuOpenPerson ? "active" : ""}`} ref={menRefPerson}>
+                    <h2>
+                        hello
                     </h2>
                 </div>
                 </div>
