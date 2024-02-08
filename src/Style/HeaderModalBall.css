@@ -1,0 +1,37 @@
+.headerModalBall{
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding: 10px;
+}
+.headerModalBall:hover{
+    background: #090909b3;
+    border-radius: 20px;
+}
+.headerModalBall__logo img{
+    width: 40px;
+    border-radius:50% ;
+    cursor: pointer;
+}
+.headerModalBall__foto img{
+    width: 80px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.headerModalBall__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.headerModalBall__logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.headerModalBall__text h2{
+    color: white;
+    margin-bottom: 5px;
+}
+.headerModalBall__text h5{
+    color: white;
+}

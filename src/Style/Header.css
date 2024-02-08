@@ -1,6 +1,8 @@
 header{
+    position: fixed;
     padding: 0 20px;
     padding-top: 20px;
+    width: 100%;
 }
 .header__logo__wrapper h2{
     color: white;
@@ -109,8 +111,7 @@ header{
     position: absolute;
     top: 50px;
     right: 50px;
-    width: 250px;
-    height: 120px;
+    width: 350px;
     border-radius: 20px;
     background-color: #282828;
     padding: 20px;
@@ -143,4 +144,133 @@ header{
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
+}
+.Person__modal__header img{
+    width: 40px;
+    border-radius: 50%;
+}
+.Person__modal__header h3{
+    color: white;
+
+}
+.Person__modal__header__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    gap: 5px;
+}
+.Person__modal__header a{
+    margin-top: 5px;
+    display: block;
+    text-decoration: none;
+    color: #3A8FD7;
+}
+.SaidBar{
+    width: 50px;
+    margin-top: 20px;
+}
+.open__menu{
+    width: 250px;
+}
+.SaidBard__grid svg{
+    color: white;
+    font-size: 30px;
+}
+.SaidBard__grid__h2{
+    color: white;
+    font-size: 15px;
+}
+.SaidBard__grid{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.saidbar__you2{
+    display: none;
+}
+.Open__menu{
+    font-size: 20px;
+
+}
+.SaidBard__grid{
+    cursor: pointer;
+    padding:10px 40px;
+    /* padding: 10px;; */
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.SaidBard__grid:hover{
+    background-color: #303030;
+}
+.saidbar__flex{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-direction: row;
+    padding: 10px;
+    margin-bottom: 0px;
+}
+.saidbar__flex2{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-direction: row;
+    padding: 10px;
+    margin-bottom: 0px;
+    display: none;
+}
+.saideBar__lin{
+    width: 250px;
+    height: 1px;
+    background-color: white;
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.saidbar__lin__open{
+    display: block;  
+}
+.saidbar__you{
+    display: none;
+}
+.saidbar__you__open{
+    display: block;
+}
+.saidbar__you h2{
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: auto;
+    border-radius: 20px;
+}
+.saidbar__you h2:hover{
+    background-color: #303030;
+}
+.saidbar__open__menu2 svg{
+    color: white;
+    font-size: 25px;
+}
+.saidbar__open__menu2:hover{
+    background-color: #303030;
+}
+.saidbar__open__menu2{
+    cursor: pointer;
+    border-radius: 20px;
+}
+.saidbar__open__menu2 h3{
+    color: white;
+}
+
+.saidbar__you2 h2{
+    color: white;
+    font-size: 25px;
+}
+.saidbar__middle__text{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
